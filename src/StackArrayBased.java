@@ -38,6 +38,10 @@ public class StackArrayBased<T> implements StackInterface<T> {
 
     @Override
     public T peek() {
-        return array[top];
+        if(top<0) {
+            return null;
+        } else {
+            return array[top];
+        }
     }
 }
